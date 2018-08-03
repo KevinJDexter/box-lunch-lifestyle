@@ -41,10 +41,10 @@ function CompletedPage(props) {
     props.history.push(pageLink);
   }
 
-  const date = new Date();
-  console.log(date);
+  // Date.now() will return the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.
+  const date = Date.now();
   const formattedDate = moment(date).format("MMMM Do, YYYY");
-  console.log(formattedDate);
+  // We can then take those milliseconds and format them with moment which will output the correct date for the respective timezone
 
   return (
     <div className={classes.root}>
